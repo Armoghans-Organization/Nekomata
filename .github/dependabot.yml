@@ -1,0 +1,39 @@
+# -------------------------------------------------------------------
+# GitHub Dependabot Configuration
+# Automatically checks for dependency updates for various ecosystems.
+# Docs: https://docs.github.com/en/github/administering-a-repository/configuration-options-for-dependency-updates
+# -------------------------------------------------------------------
+
+version: 2
+updates:
+  # ------------------------------
+  # NPM dependencies
+  # ------------------------------
+  - package-ecosystem: "npm"        # npm package manager
+    directory: "/"                  # location of package.json
+    schedule:
+      interval: "weekly"            # check weekly
+      day: "monday"                 # on Monday
+    commit-message:
+      prefix: "📌"                  # prefix for PR commit message
+      prefix: "fix(deps):"          # Use a single prefix for all npm updates
+    labels:
+      - "dependencies"              # label added to PRs
+      - "nekomata"                  # custom label for this theme/project
+      - "npm"
+
+  # ------------------------------
+  # GitHub Actions workflows
+  # ------------------------------
+  - package-ecosystem: "github-actions"
+    directory: "/"                  # location of GitHub workflows
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "👷"
+      prefix: "fix(actions):"      # Use a single prefix for all GitHub Actions updates
+    labels:
+      - "dependencies"
+      - "nekomata"                  # custom label for this theme/project
+      - "github-actions"
