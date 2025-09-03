@@ -1,0 +1,38 @@
+blank_issues_enabled: true
+
+issue_templates:
+  - name: Contributing Guidelines
+    url: https://github.com/Armoghans-Organization/Nekomata/blob/main/CONTRIBUTING.md
+    about: Read the contributing guidelines for Nekomata.
+
+  - name: Nekomata Code of Conduct
+    url: https://github.com/Armoghans-Organization/Nekomata/blob/main/CODE_OF_CONDUCT.md
+    about: View the Code of Conduct for this project.
+
+  - name: General Questions
+    url: https://github.com/Armoghans-Organization/Nekomata/discussions
+    about: Open a discussion using GitHub Discussions.
+
+  - name: "Bug Report"
+    description: "Report a bug in the system."
+    title: "[Bug]: "
+    labels: ["bug"]
+    body: "./01-bug.yml"
+
+  - name: "Feature Request"
+    description: "Propose a new feature or improvement."
+    title: "[Feature]: "
+    labels: ["enhancement"]
+    body: "./02-feature.yml"
+
+  - name: "Documentation"
+    description: "Suggest updates or additions to the documentation."
+    title: "[Docs]: "
+    labels: ["documentation"]
+    body: "./03-docs.yml"
+
+  - name: "General Report"
+    description: "Provide general feedback or inquiries."
+    title: "[General]: "
+    labels: ["general"]
+    body: "./04-general.yml"

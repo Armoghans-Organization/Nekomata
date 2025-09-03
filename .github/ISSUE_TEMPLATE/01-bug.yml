@@ -1,0 +1,130 @@
+name: 🐛 Bug Report
+description: Create a detailed bug report to help us improve Nekomata.
+title: "[Bug]: <short description>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for raising a bug report! Please fill out the following template to help us understand the issue you are experiencing.
+
+        📚 **Contributing guidelines:** [CONTRIBUTING.md](https://github.com/Armoghans-Organization/Nekomata/blob/main/CONTRIBUTING.md)
+
+        - 🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/Armoghans-Organization/Nekomata/issues)
+        - 💡 **Feature ideas:** Open a discussion on [GitHub Discussions](https://github.com/Armoghans-Organization/Nekomata/discussions)
+        - 🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/Armoghans-Organization/Nekomata/discussions)
+
+  - type: checkboxes
+    id: issue-check
+    attributes:
+      label: Issue Check
+      description: Please check existing issues to see if your bug has already been reported.
+      options:
+        - label: I have checked existing Issues and this bug has not been raised
+          required: true
+
+  - type: textarea
+    id: describe-bug
+    attributes:
+      label: 🐞 Describe the Bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 🔁 To Reproduce
+      description: |
+        Please provide the steps to reproduce the behaviour.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: reproduce-check
+    attributes:
+      label: Reproduction Consistency
+      description: Please confirm the following
+      options:
+        - label: The bug occurs consistently when following these steps
+        - label: I have tested on multiple browsers
+        - label: I have tested on multiple devices
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 🤔 Expected Behaviour
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 📸 Screenshots
+      description: |
+        If applicable, add screenshots to help explain your problem.
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: |
+        Add information about the platform where you experienced this bug.
+
+        Example:
+          - OS: [e.g. Windows 11, macOS Ventura, Linux]
+          - Browser: [e.g. Chrome 124, Firefox 115]
+          - Device: [e.g. Desktop, Mobile]
+      value: |
+          - OS:
+          - Browser:
+          - Device:
+    validations:
+      required: true
+
+  - type: textarea
+    id: hugo-version
+    attributes:
+      label: Hugo Version
+      description: Run `hugo version` and paste the output below.
+      placeholder: hugo v0.148.2 linux/amd64 BuildDate=2024-06-01T11:17:16Z VendorInfo=gohugoio
+      render: console
+    validations:
+      required: true
+
+  - type: textarea
+    id: theme-version
+    attributes:
+      label: Nekomata Theme Version
+      description: Log the version of Nekomata you are running.
+      placeholder: v1.0.0
+      render: console
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: troubleshooting
+    attributes:
+      label: Troubleshooting Steps
+      description: Please confirm you have tried the following
+      options:
+        - label: I have tried the latest version of Nekomata
+        - label: I have cleared my browser cache
+        - label: I have disabled browser extensions
+        - label: I have checked for related issues
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📝 Additional Context
+      description: |
+        Add any other context about the problem here. Are there existing GitHub Issues/Discussions that you feel are related?
+    validations:
+      required: false
