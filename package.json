@@ -1,0 +1,54 @@
+{
+    "name": "nekomata",
+    "version": "1.0.0",
+    "description": "A cozy Catppuccin-styled Hugo theme with anime vibes.",
+    "private": true,
+    "scripts": {
+        "npm-check": "npm-check -u",
+        "clean": "rimraf public resources .hugo_build.lock",
+        "rebuild": "rimraf node_modules && npm install",
+        "depcheck": "depcheck",
+        "dev": "hugo server --buildDrafts --buildFuture --buildExpired --gc --logLevel info --watch",
+        "prod": "hugo server --buildDrafts --buildFuture --buildExpired --gc --logLevel info --watch  -e production",
+        "build": "hugo --gc --logLevel info --cleanDestinationDir --minify"
+    },
+    "packageManager": "pnpm@10.15.1",
+    "engines": {
+        "node": ">=20",
+        "pnpm": ">=10.15.0",
+        "hugo": ">=0.148.2"
+    },
+    "keywords": [
+        "Hugo",
+        "Hugo theme",
+        "Catppuccin",
+        "anime",
+        "tailwind",
+        "blog",
+        "dark mode",
+        "light mode"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "npm-check": "^6.0.1",
+        "rimraf": "^6.0.1",
+        "depcheck": "^1.4.7"
+    },
+    "author": "Armoghan-ul-Mohmin",
+    "license": "MIT",
+    "homepage": "https://github.com/Armoghans-Organization/Nekomata#readme",
+    "repository": {
+        "type": "git",
+        "branch": "main",
+        "url": "git+https://github.com/Armoghans-Organization/Nekomata.git"
+    },
+    "contributors": [
+        "Armoghan-ul-Mohmin <https://armoghan.netlify.app/>"
+    ],
+    "discussions": {
+        "url": "https://github.com/Armoghans-Organization/Nekomata/discussions"
+    },
+    "bugs": {
+        "url": "https://github.com/Armoghans-Organization/Nekomata/issues"
+    }
+}
