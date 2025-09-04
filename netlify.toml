@@ -1,0 +1,49 @@
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+
+[plugins.inputs]
+output_path = "reports/lighthouse.html"
+
+[plugins.inputs.thresholds]
+performance = 0.9
+
+[build]
+command = "pnpm run build"
+publish = "public"
+
+[build.environment]
+GO111MODULE = "on"
+HUGO_ENABLEGITINFO = "true"
+HUGO_ENV = "production"
+HUGO_VERSION = "0.148.2"
+NODE_VERSION = "20.19.0"
+PNPM_VERSION = "10.15.1"
+
+[build.cache]
+paths = ["node_modules", "public"]
+
+[build.processing]
+css = { minify = true }
+html = { minify = true }
+js = { minify = true }
+
+[build.processing.images]
+auto = true
+cache = true
+formats = ["webp", "jpeg", "jpg", "png", "svg", "gif", "bmp", "tiff", "ico", "heif", "avif"]
+quality = 85
+
+[context.deploy-preview]
+HUGO_ENV = "preview"
+command = "hugo --gc --cleanDestinationDir -b $DEPLOY_PRIME_URL"
+publish = "public"
+
+[context.production]
+HUGO_ENV = "production"
+command = "pnpm run build"
+publish = "public"
+
+[context.branch-deploy]
+HUGO_ENV = "branch"
+command = "hugo --gc --cleanDestinationDir"
+publish = "public"
