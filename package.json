@@ -31,7 +31,7 @@
     "dependencies": {},
     "devDependencies": {
         "npm-check": "^6.0.1",
-        "rimraf": "^6.0.1",
+        "rimraf": "^6.1.0",
         "depcheck": "^1.4.7"
     },
     "author": "Armoghan-ul-Mohmin",
